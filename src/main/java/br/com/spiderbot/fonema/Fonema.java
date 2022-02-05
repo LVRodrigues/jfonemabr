@@ -6,7 +6,7 @@ package br.com.spiderbot.fonema;
  * @author $Author$
  * @author $Committer$
  * @version $Branch$
- * @see 
+ * @see https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf
  */
 public class Fonema {
     
