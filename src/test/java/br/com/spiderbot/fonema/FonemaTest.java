@@ -1,7 +1,6 @@
 package br.com.spiderbot.fonema;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,54 +14,92 @@ import org.junit.jupiter.api.Test;
 public class FonemaTest {
 
     /**
-     * Matriz de palavras para tests fonéticos.
+     * Matriz de palavras para teste (primeira dimensão) e resultados
+     * fonéticos conhecidos (segunda dimensão).
+     * <p>
+     * Palavras com grafias erradas são propositais, utilizando a sonoridade
+     * para testes.
      */
-    private static final String[] INPUTS = {
-        "Luciano",
-        "Que a força esteja com você",
-        "Casamento",
-        "Liquidação",
-        "Horizonte",
-        "Horizontal",
-        "Melhoria",
-        "Propagação"
+    private static final String[][] WORDS = {
+        {"Luciano",         "RSM"},
+        {"Broco",           "BK"},
+        {"Block",           "BK"},
+        {"Casa",            "KS"},
+        {"Kasa",            "KS"},
+        {"Sela",            "SR"},
+        {"Cela",            "SR"},
+        {"Circo",           "SRK"},
+        {"Sirco",           "SRK"},
+        {"Roça",            "RK"},
+        {"Rosa",            "RS"},
+        {"Você",            "V"},
+        {"Ameixa",          "MS"},
+        {"Ameicha",         "MS"},
+        {"Toracs",          "TR"},
+        {"Torax",           "TR"},
+        {"Compactar",       "KMPT"},
+        {"Compatar",        "KMPT"},
+        {"Gana",            "GM"},
+        {"Gene",            "JM"},
+        {"Gibi",            "JB"},
+        {"Gostar",          "GT"},
+        {"Guabiru",         "GBR"},
+        {"Gabiru",          "GBR"},
+        {"Fleuma",          "FRM"},
+        {"Fleugma",         "FRM"},
+        {"Hieróglifo",      "RJF"},
+        {"Hierogrifo",      "RJF"},
+        {"Negro",           "MG"},
+        {"Nego",            "MG"},
+        {"Luminar",         "RM"},
+        {"Ruminar",         "RM"},
+        {"Mudez",           "MD"},
+        {"Nudes",           "MD"},
+        {"Comendo",         "KM"},
+        {"Comeno",          "KM"},
+        {"Bunginganga",     "BJG"},
+        {"Bujiganga",       "BJG"},
+        {"Philipe",         "FRP"},
+        {"Felipe",          "FRP"},
+        {"Queijo",          "KJ"},
+        {"Kejo",            "KJ"},
+        {"Lagarto",         "RGT"},
+        {"Largato",         "RGT"},
+        {"Perspectiva",     "PSPTV"},
+        {"Pespectiva",      "PSPTV"},
+        {"Lagartixa",       "RGTS"},
+        {"Lagarticha",      "RGTS"},
+        {"Largatixa",       "RGTS"},
+        {"Mesmo",           "MSM"},
+        {"Mermo",           "MSM"},
+        {"Virgem",          "VJ"},
+        {"Vige",            "VJ"},
+        {"Superstição",     "SPTK"},
+        {"Supertição",      "SPTK"},
+        {"Contrato",        "KMT"},
+        {"Contlato",        "KMT"},
+        {"Walter",          "VT"},
+        {"Valter",          "VT"},
+        {"Exceder",         "SD"},
+        {"Esceder",         "SD"}
     };
 
     /**
-     * Matriz de resultados esperados para os testes fonéticos,
-     * conforme a matriz INPUTS.
+     * Índice das palavras para teste.
      */
-    private static final String[] EXPECTEDS = {
-        "RSM",
-        "K FRK TJ K V",
-        "KSMT",
-        "RKDK",
-        "RSMT",
-        "RSMT",
-        "MR",
-        "PGK"
-    };
-    
+    private static final int WORDS_TEST_INDEX = 0;
+
     /**
-     * Teste de processamento de fonemas, com palavras e fonemas conhecidos.
-     * <p>
-     * A matriz INPUTS possui os mesmos índices da matriz EXPECTEDS.
+     * Índice dos fonemas de resultados conhecidos.
      */
+    private static final int WORDS_RESULT_INDEX = 1;
+
     @Test
     public void testProcess() {
-        for (int i = 0; i < INPUTS.length; i++) {
-            String result = Fonema.process(INPUTS[i]);
-            assertEquals(EXPECTEDS[i], result, String.format("Falha ao processar a palavra %s.", INPUTS[i]));
+        for (int i = 0; i < WORDS.length; i++) {
+            String result = Fonema.process(WORDS[i][WORDS_TEST_INDEX]);
+            assertEquals(WORDS[i][WORDS_RESULT_INDEX], result,
+                        String.format("Erro ao processar a palavra %s.", WORDS[i][WORDS_TEST_INDEX]));
         }
-    }
-
-    /**
-     * Teste de fonemas com palavras escritas de modo errado, mas sonoramente parecidas.
-     */
-    @Test
-    public void testFejaum() {
-        String feijao = Fonema.process("Feijão");
-        String fejaum = Fonema.process("Fejaum");
-        assertEquals(feijao, fejaum, "Falha no teste do feijão.");
     }
 }
