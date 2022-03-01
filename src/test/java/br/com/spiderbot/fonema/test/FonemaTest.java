@@ -1,8 +1,10 @@
-package br.com.spiderbot.fonema;
+package br.com.spiderbot.fonema.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+
+import br.com.spiderbot.fonema.Fonema;
 
 /**
  * Testes unitários para {@link Fonema}.

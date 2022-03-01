@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * @author $Author$
  * @author $Committer$
  * @version $Branch$
- * @see https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf
+ * @see <a href="https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf">NOVOB.pdf</a>
  */
 public class Fonema {
 
