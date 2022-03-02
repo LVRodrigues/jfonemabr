@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 /**
  * Implementação d algorítimo BuscarBR para pesquisa fonética no idioma português.
  * 
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorEmail$
+ * @author $CommitterEmail$
  * @version $Branch$
  * @see <a href="https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf">NOVOB.pdf</a>
  */

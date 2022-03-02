@@ -1,8 +1,8 @@
 /**
  * Testes unitários.
  * 
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorEmail$
+ * @author $CommitterEmail$
  * @version $Branch$
  */
 package br.com.spiderbot.fonema.test;

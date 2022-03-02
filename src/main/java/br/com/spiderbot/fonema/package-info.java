@@ -1,8 +1,8 @@
 /**
  * Tratamento de fonemas para pesquisa fonética no idioma português.
  * 
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorEmail$
+ * @author $CommitterEmail$
  * @version $Branch$
  */
 package br.com.spiderbot.fonema;

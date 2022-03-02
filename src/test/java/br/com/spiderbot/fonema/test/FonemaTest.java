@@ -9,8 +9,8 @@ import br.com.spiderbot.fonema.Fonema;
 /**
  * Testes unitários para {@link Fonema}.
  * 
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorEmail$
+ * @author $CommitterEmail$
  * @version $Branch$
  */
 public class FonemaTest {
