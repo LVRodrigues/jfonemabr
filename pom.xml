@@ -16,6 +16,7 @@
 
   <properties>
     <scm.url>scm:git:https://github.com/LVRodrigues/jfonemabr.git</scm.url>
+    <topSiteURL>${scm.url}</topSiteURL>
   </properties>
 
   <dependencies>
