@@ -1,16 +1,16 @@
-package br.com.spiderbot.fonema.test;
+package io.github.lvrodrigues.fonema.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.spiderbot.fonema.Fonema;
+import io.github.lvrodrigues.fonema.Fonema;
 
 /**
  * Testes unitários para {@link Fonema}.
  * 
- * @author $AuthorEmail$
- * @author $CommitterEmail$
+ * @author $Author$
+ * @author $Committer$
  * @version $Branch$
  */
 public class FonemaTest {

@@ -1,13 +1,13 @@
-package br.com.spiderbot.fonema;
+package io.github.lvrodrigues.fonema;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Implementação d algorítimo BuscarBR para pesquisa fonética no idioma português.
+ * Implementação do algorítimo BuscarBR para pesquisa fonética no idioma português.
  * 
- * @author $AuthorEmail$
- * @author $CommitterEmail$
+ * @author $Author$
+ * @author $Committer$
  * @version $Branch$
  * @see <a href="https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf">NOVOB.pdf</a>
  */

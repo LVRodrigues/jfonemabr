@@ -3,16 +3,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.github.lvrodrigues</groupId>
+    <groupId>io.github.lvrodrigues</groupId>
     <artifactId>bom</artifactId>
-    <version>17.0-SNAPSHOT</version>
+    <version>17.0.0</version>
   </parent>
 
-  <groupId>br.com.spiderbot</groupId>
+  <groupId>io.github.lvrodrigues</groupId>
   <artifactId>jfonemabr</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>jfonemabr</name>
   <url>https://github.com/LVRodrigues/jfonemabr</url>
+
+  <properties>
+    <scm.url>scm:git:https://github.com/LVRodrigues/jfonemabr.git</scm.url>
+  </properties>
 
   <dependencies>
     <dependency>
