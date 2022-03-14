@@ -9,8 +9,8 @@ import io.github.lvrodrigues.fonema.Fonema;
 /**
  * Testes unitários para {@link Fonema}.
  *
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @version $Branch$
  */
 public class FonemaTest {

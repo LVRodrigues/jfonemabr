@@ -1,8 +1,8 @@
 /**
  * Testes unitários.
  * 
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @version $Branch$
  */
 module io.github.lvrodrigues.fonema.test {
