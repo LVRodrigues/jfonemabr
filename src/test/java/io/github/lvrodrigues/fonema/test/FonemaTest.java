@@ -8,7 +8,7 @@ import io.github.lvrodrigues.fonema.Fonema;
 
 /**
  * Testes unitários para {@link Fonema}.
- * 
+ *
  * @author $Author$
  * @author $Committer$
  * @version $Branch$
@@ -18,8 +18,8 @@ public class FonemaTest {
     /**
      * Matriz de palavras para teste (primeira dimensão) e resultados
      * fonéticos conhecidos (segunda dimensão).
-     * <p>
-     * Palavras com grafias erradas são propositais, utilizando a sonoridade
+     * 
+     * <p>Palavras com grafias erradas são propositais, utilizando a sonoridade
      * para testes.
      */
     private static final String[][] WORDS = {
@@ -96,6 +96,9 @@ public class FonemaTest {
      */
     private static final int WORDS_RESULT_INDEX = 1;
 
+    /**
+     * Teste de vários fonemas.
+     */
     @Test
     public void testProcess() {
         for (int i = 0; i < WORDS.length; i++) {

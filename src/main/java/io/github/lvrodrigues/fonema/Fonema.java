@@ -5,21 +5,21 @@ import java.util.regex.Pattern;
 
 /**
  * Implementação do algorítimo BuscarBR para pesquisa fonética no idioma português.
- * 
+ *
  * @author $Author$
  * @author $Committer$
  * @version $Branch$
  * @see <a href="https://github.com/LVRodrigues/jfonemabr/blob/main/docs/NOVOB.pdf">NOVOB.pdf</a>
  */
-public class Fonema {
+public final class Fonema {
 
     /**
      * Lista de caracteres acentuados que devem ser substituidos.
-     * <p>
-     * Como o primeiro passo para obter o fonema é passar o texto para maiúsculo,
+     *
+     * <p>Como o primeiro passo para obter o fonema é passar o texto para maiúsculo,
      * não há necessidade de tratar os caracteres minúsculos acentuados.
-     * <p>
-     * A primeira dimensão possui a lista de caracteres acentuados. A segunda
+     *
+     * <p>A primeira dimensão possui a lista de caracteres acentuados. A segunda
      * dimensão poussui os caracteres de substituição.
      */
     private static final char[][] INVALID_CHARS = {
@@ -61,6 +61,7 @@ public class Fonema {
      * Conjunto de expressões regulares (primeira dimensão) e seus caracteres de 
      * substituição (segunda dimensão).
      */
+    @SuppressWarnings("MultipleStringLiterals")
     private static final Object[][] REPLACES = {
         {Pattern.compile("(BL|BR)"),                    "B"},
         {Pattern.compile("(PH)"),                       "F"},
@@ -99,11 +100,11 @@ public class Fonema {
 
     /**
      * Processa um texto aplicando as regras do algorítimo BuscarBR.
-     * 
+     *
      * @param text Texto para extrair os fonemas.
      * @return Fonemas.
      */
-    public static String process(String text) {
+    public static String process(final String text) {
         // 1. Converter para maiúsculas.
         String result = text.toUpperCase();
         // 2. Remover caracteres especiais e acentos:
@@ -118,13 +119,13 @@ public class Fonema {
 
     /**
      * Remove caracteres duplicados consecutivamente.
-     * 
+     *
      * @param text Texto para processar.
      * @return Fonema.
      */
-    private static String duplicates(String text) {
-        char current            = 0;
-        StringBuilder result    = new StringBuilder();
+    private static String duplicates(final String text) {
+        char current                = 0;
+        final StringBuilder result  = new StringBuilder();
         for (char c : text.toCharArray()) {
             if (current != c) {
                 result.append(c);
@@ -136,31 +137,33 @@ public class Fonema {
 
     /**
      * Troca letras baseadas em expressões regulares.
+     *
      * @param text Texto para manipular.
-     * @return
+     * @return Texto manipulado.
      */
-    private static String replaces(String text) {
+    private static String replaces(final String text) {
         String result = text;
         for (int i = 0; i < REPLACES.length; i++) {
-            Matcher matcher = ((Pattern) REPLACES[i][REPLACE_PATTERN_INDEX]).matcher(result);
-            result          = matcher.replaceAll((String) REPLACES[i][REPLACE_VALUE_INDEX]);
+            final Matcher matcher   = ((Pattern) REPLACES[i][REPLACE_PATTERN_INDEX]).matcher(result);
+            result                  = matcher.replaceAll((String) REPLACES[i][REPLACE_VALUE_INDEX]);
         }
         return result;
     }
 
     /**
      * Limpa os caracteres acentuados e especiais do texto.
+     *
      * @param text Texto para ser limpo.
      * @return Texto manipulado.
      */
-    private static String clean(String text) {
+    private static String clean(final String text) {
         String result = text;
         for (int i = 0; i < INVALID_CHARS[INVALID_SEARCH_INDEX].length; i++) {
             result = result.replace(INVALID_CHARS[INVALID_SEARCH_INDEX][i], 
                                     INVALID_CHARS[INVALID_REPLACE_INDEX][i]);
         }
         // Removendo os demais caracteres especiais:
-        Matcher matcher = INVALID_PATTERN.matcher(result);
+        final Matcher matcher = INVALID_PATTERN.matcher(result);
         return matcher.replaceAll("");
     }
 }
