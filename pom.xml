@@ -10,7 +10,7 @@
 
   <groupId>io.github.lvrodrigues</groupId>
   <artifactId>jfonemabr</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>jfonemabr</name>
   <url>https://lvrodrigues.github.io/repository/${project.artifactId}-${project.version}/${project.artifactId}</url>
 
