@@ -38,7 +38,9 @@
     </custom>
 
     <body>
-        <menu ref="parent"/>
+        <menu name="Projeto Pai">
+            <item name="bom-17.0.1" href="https://lvrodrigues.github.io/repository/bom-17.0.1"/>
+        </menu>
         <menu ref="modules"/>
         <menu ref="reports"/>
     </body>
