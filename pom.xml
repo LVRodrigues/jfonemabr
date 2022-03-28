@@ -13,6 +13,7 @@
   <version>1.0.0</version>
   <name>jfonemabr</name>
   <url>https://lvrodrigues.github.io/repository/${project.artifactId}-${project.version}/${project.artifactId}</url>
+  <description>Analisador fonético para o idioma português brasileiro, implementando o algorítimo BuscarBR.</description>
 
   <properties>
     <scm.url>scm:git:https://github.com/LVRodrigues/jfonemabr.git</scm.url>
